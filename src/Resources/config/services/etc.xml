@@ -6,8 +6,8 @@
 
     <services>
 
-        <service id="blackowl_sylius_supplier.assigner.products"
-                 class="BlackOwl\SyliusSupplierPlugin\Assigner\ProductsAssigner"/>
+        <service id="blackowl_sylius_um.assigner.products"
+                 class="Blackowl\SyliusUmPlugin\Assigner\ProductsAssigner"/>
 
     </services>
 

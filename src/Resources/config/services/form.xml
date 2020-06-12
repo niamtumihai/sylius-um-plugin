@@ -5,44 +5,37 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="blackowl_sylius_supplier.form.type.supplier.validation_groups" type="collection">
-            <parameter>blackowl_sylius_supplier</parameter>
+        <parameter key="blackowl_sylius_um.form.type.um.validation_groups" type="collection">
+            <parameter>blackowl_sylius_um</parameter>
         </parameter>
     </parameters>
 
     <services>
 
-        <service id="blackowl_sylius_supplier.form.extension.type.product"
-                 class="BlackOwl\SyliusSupplierPlugin\Form\Extension\ProductTypeExtension">
-            <argument>%blackowl_sylius_supplier.model.supplier.class%</argument>
+        <service id="blackowl_sylius_um.form.extension.type.product"
+                 class="Blackowl\SyliusUmPlugin\Form\Extension\ProductUmTypeExtension">
+            <argument>%blackowl_sylius_um.model.um.class%</argument>
 
             <tag name="form.type_extension" extended_type="Sylius\Bundle\ProductBundle\Form\Type\ProductType"/>
         </service>
 
-        <service id="blackowl_sylius_supplier.form.extension.type.api_product"
-                 class="BlackOwl\SyliusSupplierPlugin\Form\Extension\Api\ProductTypeExtension">
-            <argument>%blackowl_sylius_supplier.model.supplier.class%</argument>
+        <service id="blackowl_sylius_um.form.type.um_choice"
+                 class="Blackowl\SyliusUmPlugin\Form\Type\ProductUmChoiceType">
+            <argument type="service" id="blackowl_sylius_um.repository.um"/>
 
-            <tag name="form.type_extension" extended_type="Sylius\Bundle\AdminApiBundle\Form\Type\ProductType"/>
+            <tag name="form.type" alias="blackowl_sylius_um_choice"/>
         </service>
 
-        <service id="blackowl_sylius_supplier.form.type.supplier_choice"
-                 class="BlackOwl\SyliusSupplierPlugin\Form\Type\SupplierChoiceType">
-            <argument type="service" id="blackowl_sylius_supplier.repository.supplier"/>
+        <service id="blackowl_sylius_um.form.type.um_autocomplete_choice"
+                 class="Blackowl\SyliusUmPlugin\Form\Type\ProductUmAutocompleteChoiceType">
 
-            <tag name="form.type" alias="blackowl_sylius_supplier_choice"/>
+            <tag name="form.type" alias="blackowl_sylius_um_autocomplete_choice"/>
         </service>
 
-        <service id="blackowl_sylius_supplier.form.type.supplier_autocomplete_choice"
-                 class="BlackOwl\SyliusSupplierPlugin\Form\Type\SupplierAutocompleteChoiceType">
-
-            <tag name="form.type" alias="blackowl_sylius_supplier_autocomplete_choice"/>
-        </service>
-
-        <service id="blackowl_sylius_supplier.form.type.supplier"
-                 class="BlackOwl\SyliusSupplierPlugin\Form\Type\SupplierType">
-            <argument>%blackowl_sylius_supplier.model.supplier.class%</argument>
-            <argument>%blackowl_sylius_supplier.form.type.supplier.validation_groups%</argument>
+        <service id="blackowl_sylius_um.form.type.um"
+                 class="Blackowl\SyliusUmPlugin\Form\Type\ProductUmType">
+            <argument>%blackowl_sylius_um.model.um.class%</argument>
+            <argument>%blackowl_sylius_um.form.type.um.validation_groups%</argument>
 
             <tag name="form.type"/>
         </service>

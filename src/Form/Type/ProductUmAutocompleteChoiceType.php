@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BlackOwl\SyliusUmPlugin\Form\Type;
+namespace Blackowl\SyliusUmPlugin\Form\Type;
 
 use Sylius\Bundle\ResourceBundle\Form\Type\ResourceAutocompleteChoiceType;
 use Symfony\Component\Form\AbstractType;
@@ -18,7 +18,7 @@ final class ProductUmAutocompleteChoiceType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'resource' => 'blackowl_sylius_productUm.um',
+            'resource' => 'blackowl_sylius_um.um',
             'choice_name' => 'name',
             'choice_value' => 'code',
         ]);
@@ -38,7 +38,7 @@ final class ProductUmAutocompleteChoiceType extends AbstractType
      */
     public function getBlockPrefix(): string
     {
-        return 'blackowl_sylius_productUm_autocomplete_choice';
+        return 'blackowl_sylius_um_autocomplete_choice';
     }
 
     /**

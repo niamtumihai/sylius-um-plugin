@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BlackOwl\SyliusUmPlugin\EventListener;
+namespace Blackowl\SyliusUmPlugin\EventListener;
 
 use Blackowl\SyliusUmPlugin\Entity\ProductUmInterface;
 use Sylius\Bundle\ResourceBundle\Event\ResourceControllerEvent;

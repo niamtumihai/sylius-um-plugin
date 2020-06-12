@@ -6,7 +6,7 @@ namespace Blackowl\SyliusUmPlugin\Doctrine\ORM;
 
 use Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository;
 
-class ProductUmRepository extends EntityRepository implements SupplierRepositoryInterface
+class ProductUmRepository extends EntityRepository implements ProductUmRepositoryInterface
 {
     /**
      * {@inheritdoc}

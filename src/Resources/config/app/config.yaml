@@ -1,9 +1,9 @@
 imports:
-    - "@BlackOwlSyliusUmPlugin/Resources/config/grids/blackowl_sylius_productUm_admin_um.yaml"
+    - "@BlackowlSyliusUmPlugin/Resources/config/grids/blackowl_sylius_um_admin_um.yaml"
 
 jms_serializer:
     metadata:
         directories:
             blackowl-sylius-um:
-                namespace_prefix: "BlackOwl\\SyliusUmPlugin\\Model"
-                path: "@BlackOwlSyliusUmPlugin/Resources/config/serializer"
+                namespace_prefix: "Blackowl\\SyliusUmPlugin\\Model"
+                path: "@BlackowlSyliusUmPlugin/Resources/config/serializer"

@@ -5,5 +5,5 @@ loevgaard_sylius_supplier_shop:
         _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
 
 loevgaard_sylius_supplier_admin:
-    resource: "@BlackOwlSyliusSupplierPlugin/Resources/config/routing/admin.yaml"
+    resource: "@BlackowlSyliusUmPlugin/Resources/config/routing/admin.yaml"
     prefix: /admin

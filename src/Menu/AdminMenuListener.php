@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BlackOwl\SyliusUmPlugin\Menu;
+namespace Blackowl\SyliusUmPlugin\Menu;
 
 use Knp\Menu\ItemInterface;
 use Sylius\Bundle\UiBundle\Menu\Event\MenuBuilderEvent;
@@ -18,20 +18,20 @@ final class AdminMenuListener
 
         $catalog = $menu->getChild('catalog');
 
-        if ($catalog) {
-            $this->addChild($catalog);
-        } else {
-            $this->addChild($menu->getFirstChild());
-        }
+//        if ($catalog) {
+//            $this->addChild($catalog);
+//        } else {
+//            $this->addChild($menu->getFirstChild());
+//        }
     }
 
     private function addChild(ItemInterface $item): void
     {
-        $item
-            ->addChild('um', [
-                'route' => 'blackowl_sylius_productUm_admin_um_index',
-            ])
-            ->setLabel('blackowl_sylius_productUm.ui.um')
-            ->setLabelAttribute('icon', 'boxes');
+//        $item
+//            ->addChild('um', [
+//         //       'route' => 'blackowl_sylius_um_admin_um_index',
+//            ])
+//            ->setLabel('blackowl_sylius_um.ui.plm')
+//            ->setLabelAttribute('icon', 'boxes');
     }
 }

@@ -4,12 +4,6 @@ sylius_grid:
             fields:
                 um:
                     type: twig
-                    label: blackowl_sylius_supplier.ui.supplier
+                    label: blackowl_sylius_um.ui.um
                     options:
-                        template: "@BlackOwlSyliusUmPlugin/Grid/Field/um.html.twig"
-            filters:
-                supplier:
-                    type: entity
-                    label: blackowl_sylius_supplier.ui.supplier
-                    form_options:
-                        class: "%blackowl_sylius_um.entity.productUm.class%"
+                        template: "@BlackowlSyliusUmPlugin/Grid/Field/um.html.twig"

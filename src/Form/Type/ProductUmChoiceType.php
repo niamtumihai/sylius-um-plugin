@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BlackOwl\SyliusUmPlugin\Form\Type;
+namespace Blackowl\SyliusUmPlugin\Form\Type;
 
 use Sylius\Component\Resource\Repository\RepositoryInterface;
 use Symfony\Bridge\Doctrine\Form\DataTransformer\CollectionToArrayTransformer;
@@ -65,6 +65,6 @@ final class ProductUmChoiceType extends AbstractType
      */
     public function getBlockPrefix(): string
     {
-        return 'blackowl_sylius_productUm_choice';
+        return 'blackowl_sylius_um_choice';
     }
 }

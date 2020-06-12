@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BlackOwl\SyliusUmPlugin\Menu;
+namespace Blackowl\SyliusUmPlugin\Menu;
 
 use Knp\Menu\FactoryInterface;
 use Knp\Menu\ItemInterface;
@@ -14,7 +14,7 @@ use Symfony\Contracts\EventDispatcher\EventDispatcherInterface as ContractsEvent
 
 final class ProductUmFormMenuBuilder
 {
-    public const EVENT_NAME = 'blackowl_sylius_productUm.menu.admin.um.form';
+    public const EVENT_NAME = 'blackowl_sylius_um.menu.admin.um.form';
 
     /** @var FactoryInterface */
     private $factory;
@@ -48,7 +48,7 @@ final class ProductUmFormMenuBuilder
 
         $menu
             ->addChild('details')
-            ->setAttribute('template', '@BlackOwlSyliusSupplierPlugin/Admin/Um/Tab/_details.html.twig')
+            ->setAttribute('template', '@BlackowlSyliusUmPlugin/Admin/Um/Tab/_details.html.twig')
             ->setLabel('sylius.ui.details')
             ->setCurrent(true)
         ;

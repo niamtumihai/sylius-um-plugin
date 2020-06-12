@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BlackOwl\SyliusUmPlugin\Form\Type;
+namespace Blackowl\SyliusUmPlugin\Form\Type;
 
 use Sylius\Bundle\ResourceBundle\Form\EventSubscriber\AddCodeFormSubscriber;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
@@ -19,10 +19,10 @@ final class ProductUmType extends AbstractResourceType
     {
         $builder
             ->addEventSubscriber(new AddCodeFormSubscriber(null, [
-                'label' => 'blackowl_sylius_productUm.form.um.code',
+                'label' => 'blackowl_sylius_um.form.um.code',
             ]))
             ->add('name', TextType::class, [
-                'label' => 'blackowl_sylius_productUm.form.um.name',
+                'label' => 'blackowl_sylius_um.form.um.name',
             ]);
     }
 
@@ -31,6 +31,6 @@ final class ProductUmType extends AbstractResourceType
      */
     public function getBlockPrefix(): string
     {
-        return 'blackowl_sylius_productUm_um';
+        return 'blackowl_sylius_um_um';
     }
 }

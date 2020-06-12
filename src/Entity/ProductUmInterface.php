@@ -6,6 +6,7 @@ namespace Blackowl\SyliusUmPlugin\Entity;
 use Sylius\Component\Resource\Model\CodeAwareInterface;
 use Sylius\Component\Resource\Model\ResourceInterface;
 
+
 interface ProductUmInterface extends ResourceInterface, CodeAwareInterface, ProductsAwareInterface{
     /**
      * Returns the name of the supplier

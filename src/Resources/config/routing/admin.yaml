@@ -1,19 +1,15 @@
-blackowl_sylius_supplier_admin_ajax:
-    resource: "@BlackOwlSyliusSupplierPlugin/Resources/config/routing/admin/ajax.yaml"
-    prefix: /ajax
-
-blackowl_sylius_supplier_admin_supplier:
+blackowl_sylius_um_admin:
     resource: |
-        alias: blackowl_sylius_supplier.supplier
+        alias: blackowl_sylius_um.um
         section: admin
         templates: SyliusAdminBundle:Crud
         redirect: update
-        grid: blackowl_sylius_supplier_admin_supplier
+        grid: blackowl_sylius_um_admin_um
         vars:
             all:
-                subheader: blackowl_sylius_supplier.ui.supplier
+                subheader: blackowl_sylius_um.ui.um
                 templates:
-                    form: "@BlackOwlSyliusSupplierPlugin/Admin/Supplier/_form.html.twig"
+                    form: "@BlackowlSyliusUmPlugin/Admin/Supplier/_form.html.twig"
             index:
                 icon: 'file image outline'
     type: sylius.resource

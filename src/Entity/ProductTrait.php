@@ -5,13 +5,14 @@ declare(strict_types=1);
 namespace Blackowl\SyliusUmPlugin\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Blackowl\SyliusUmPlugin\Entity\ProductUmInterface;
 
 trait ProductTrait
 {
     /**
      * @var ProductUmInterface
      *
-     * @ORM\ManyToOne(targetEntity="\BlackOwl\SyliusUmPlugin\Entity\ProductUmInterface", cascade={"persist"}, fetch="EAGER", inversedBy="products")
+     * @ORM\ManyToOne(targetEntity="Blackowl\SyliusUmPlugin\Entity\ProductUm", cascade={"persist"}, fetch="EAGER", inversedBy="products")
      * @ORM\JoinColumn(name="um_id", referencedColumnName="id", onDelete="SET NULL")
      */
     protected $um;

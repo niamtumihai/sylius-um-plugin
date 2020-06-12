@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace BlackOwl\SyliusSupplierPlugin\Assigner;
+namespace Blackowl\SyliusUmPlugin\Assigner;
 
 use Blackowl\SyliusUmPlugin\Entity\ProductUmInterface;
-use BlackOwl\SyliusUmPlugin\Entity\ProductInterface;
+use Blackowl\SyliusUmPlugin\Entity\ProductInterface;
 
 final class ProductsAssigner implements ProductsAssignerInterface
 {

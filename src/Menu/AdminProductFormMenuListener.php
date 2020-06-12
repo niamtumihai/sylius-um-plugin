@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BlackOwl\SyliusUmPlugin\Menu;
+namespace Blackowl\SyliusUmPlugin\Menu;
 
 use Sylius\Bundle\AdminBundle\Event\ProductMenuBuilderEvent;
 
@@ -17,8 +17,8 @@ final class AdminProductFormMenuListener
 
         $menu
             ->addChild('um')
-            ->setAttribute('template', '@BlackOwlSyliusUmPlugin/Admin/Product/_um.html.twig')
-            ->setLabel('blackowl_sylius_productUm.ui.um')
+            ->setAttribute('template', '@BlackowlSyliusUmPlugin/Admin/Product/_um.html.twig')
+            ->setLabel('blackowl_sylius_um.ui.um')
         ;
     }
 }

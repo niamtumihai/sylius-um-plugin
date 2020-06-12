@@ -6,21 +6,21 @@
 
     <services>
 
-        <service id="blackowl_sylius_supplier.listener.admin.menu_builder"
-                 class="BlackOwl\SyliusSupplierPlugin\Menu\AdminMenuListener">
+        <service id="blackowl_sylius_um.listener.admin.menu_builder"
+                 class="Blackowl\SyliusUmPlugin\Menu\AdminMenuListener">
             <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="addAdminMenuItems"/>
         </service>
 
-        <service id="blackowl_sylius_supplier.listener.admin.product_form_menu_builder"
-                 class="BlackOwl\SyliusSupplierPlugin\Menu\AdminProductFormMenuListener">
+        <service id="blackowl_sylius_um.listener.admin.product_form_menu_builder"
+                 class="Blackowl\SyliusUmPlugin\Menu\AdminProductFormMenuListener">
             <tag name="kernel.event_listener" event="sylius.menu.admin.product.form" method="addItems"/>
         </service>
 
-        <service id="blackowl_sylius_supplier.admin.menu_builder.supplier_form"
-                 class="BlackOwl\SyliusSupplierPlugin\Menu\SupplierFormMenuBuilder">
+        <service id="blackowl_sylius_um.admin.menu_builder.supplier_form"
+                 class="Blackowl\SyliusUmPlugin\Menu\ProductUmFormMenuBuilder">
             <argument type="service" id="knp_menu.factory" />
             <argument type="service" id="event_dispatcher" />
-            <tag name="knp_menu.menu_builder" method="createMenu" alias="blackowl_sylius_supplier.admin.supplier_form" />
+            <tag name="knp_menu.menu_builder" method="createMenu" alias="blackowl_sylius_um.admin.um_form" />
         </service>
 
     </services>

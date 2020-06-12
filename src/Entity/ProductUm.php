@@ -37,7 +37,7 @@ class ProductUm implements ProductUmInterface {
      *
      * @return integer 
      */
-    public function getId() {
+    public function getId(): ?int {
         return $this->id;
     }
 
@@ -47,10 +47,8 @@ class ProductUm implements ProductUmInterface {
      * @param string $name
      * @return ProductUm
      */
-    public function setName($umName) {
-        $this->name = $umName;
-
-        return $this;
+    public function setName(?string $name): void {
+        $this->name = $name;
     }
 
     /**
@@ -58,11 +56,11 @@ class ProductUm implements ProductUmInterface {
      *
      * @return string 
      */
-    public function getName() {
+    public function getName(): ?string {
         return $this->name;
     }
 
-    public function __toString() {
+     public function __toString(): string {
         return $this->name;
     }
 
