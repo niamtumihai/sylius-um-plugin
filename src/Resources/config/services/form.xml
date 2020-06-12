@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="blackowl_sylius_supplier.form.type.supplier.validation_groups" type="collection">
+            <parameter>blackowl_sylius_supplier</parameter>
+        </parameter>
+    </parameters>
+
+    <services>
+
+        <service id="blackowl_sylius_supplier.form.extension.type.product"
+                 class="BlackOwl\SyliusSupplierPlugin\Form\Extension\ProductTypeExtension">
+            <argument>%blackowl_sylius_supplier.model.supplier.class%</argument>
+
+            <tag name="form.type_extension" extended_type="Sylius\Bundle\ProductBundle\Form\Type\ProductType"/>
+        </service>
+
+        <service id="blackowl_sylius_supplier.form.extension.type.api_product"
+                 class="BlackOwl\SyliusSupplierPlugin\Form\Extension\Api\ProductTypeExtension">
+            <argument>%blackowl_sylius_supplier.model.supplier.class%</argument>
+
+            <tag name="form.type_extension" extended_type="Sylius\Bundle\AdminApiBundle\Form\Type\ProductType"/>
+        </service>
+
+        <service id="blackowl_sylius_supplier.form.type.supplier_choice"
+                 class="BlackOwl\SyliusSupplierPlugin\Form\Type\SupplierChoiceType">
+            <argument type="service" id="blackowl_sylius_supplier.repository.supplier"/>
+
+            <tag name="form.type" alias="blackowl_sylius_supplier_choice"/>
+        </service>
+
+        <service id="blackowl_sylius_supplier.form.type.supplier_autocomplete_choice"
+                 class="BlackOwl\SyliusSupplierPlugin\Form\Type\SupplierAutocompleteChoiceType">
+
+            <tag name="form.type" alias="blackowl_sylius_supplier_autocomplete_choice"/>
+        </service>
+
+        <service id="blackowl_sylius_supplier.form.type.supplier"
+                 class="BlackOwl\SyliusSupplierPlugin\Form\Type\SupplierType">
+            <argument>%blackowl_sylius_supplier.model.supplier.class%</argument>
+            <argument>%blackowl_sylius_supplier.form.type.supplier.validation_groups%</argument>
+
+            <tag name="form.type"/>
+        </service>
+    </services>
+
+</container>

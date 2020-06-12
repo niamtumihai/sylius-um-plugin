@@ -1,0 +1,26 @@
+blackowl_sylius_supplier_admin_ajax_suppliers_by_phrase:
+    path: /search
+    methods: [GET]
+    defaults:
+        _controller: blackowl_sylius_supplier.controller.supplier:indexAction
+        _format: json
+        _sylius:
+            serialization_groups: [Autocomplete]
+            permission: true
+            repository:
+                method: findByPhrase
+                arguments:
+                    phrase: $phrase
+
+blackowl_sylius_supplier_admin_ajax_supplier_by_code:
+    path: /
+    methods: [GET]
+    defaults:
+        _controller: blackowl_sylius_supplier.controller.supplier:indexAction
+        _format: json
+        _sylius:
+            serialization_groups: [Autocomplete]
+            permission: true
+            repository:
+                method: findBy
+                arguments: [code: $code]

@@ -1,0 +1,4 @@
+blackowl_sylius_supplier:
+    supplier:
+        delete_error: 'The supplier cannot be deleted. It is used by one or more products.'
+    

@@ -6,11 +6,16 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                                       http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <mapped-superclass name="BlackOwl\SyliusUmPlugin\Entity\ProductUm" table="blackowl_products_um">
+    <mapped-superclass name="BlackOwl\SyliusSupplierPlugin\Entity\ProductUm" table="blackowl_products_um">
         <id name="id" column="id" type="integer">
             <generator strategy="AUTO" />
         </id>
         <one-to-many field="products" target-entity="Sylius\Component\Product\Model\ProductInterface" mapped-by="um" fetch="EXTRA_LAZY" />
+        <field name="code" type="string" unique="true" />
         <field name="name" type="string" />
+        <field name="address" type="string" />
+        <field name="email" type="string" />
+        <field name="tel" type="string" />
+        <field name="vat" type="string" />
     </mapped-superclass>
 </doctrine-mapping>

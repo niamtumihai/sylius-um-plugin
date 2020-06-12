@@ -1,0 +1,39 @@
+sylius_grid:
+    templates:
+        action:
+            um_product_list: "@BlackOwlSyliusUmPlugin/Grid/Action/umProductList.html.twig"
+    grids:
+        blackowl_sylius_supplier_admin_supplier:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%blackowl_sylius_supplier.model.supplier.class%"
+            sorting:
+                name: asc
+            fields:
+                code:
+                    type: string
+                    label: blackowl_sylius_supplier.ui.code
+                    sortable: ~
+                name:
+                    type: string
+                    label: blackowl_sylius_supplier.ui.name
+                    sortable: ~
+                
+            filters:
+                search:
+                    type: string
+                    options:
+                        fields: [code, name]
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    suppliers_product_list:
+                        type: suppliers_product_list
+                        label: blackowl_sylius_supplier.ui.suppliers_product_list
+                    delete:
+                        type: delete

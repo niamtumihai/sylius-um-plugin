@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Blackowl\SyliusUmPlugin\DependencyInjection;
 
+use Sylius\Bundle\ResourceBundle\DependencyInjection\Extension\AbstractResourceExtension;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 
-final class BlackowlSyliusUmPluginExtension extends Extension
+final class BlackowlSyliusUmPluginExtension extends AbstractResourceExtension
 {
     /**
      * {@inheritdoc}
@@ -18,6 +18,8 @@ final class BlackowlSyliusUmPluginExtension extends Extension
     {
         $config = $this->processConfiguration($this->getConfiguration([], $container), $config);
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+        
+        $this->registerResources('blackowl_sylius_products_um', $config['driver'], $config['resources'], $container);
 
         $loader->load('services.xml');
     }

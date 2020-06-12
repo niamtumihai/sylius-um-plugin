@@ -10,8 +10,12 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="blackowl_products_um")
  * @ORM\Entity
  */
-class ProductUm
-{
+class ProductUm implements ProductUmInterface {
+
+    use ProductsAwareTrait {
+        ProductsAwareTrait::__construct as private __productsAwareTraitConstruct;
+    }
+
     /**
      * @var integer $id
      *
@@ -21,34 +25,31 @@ class ProductUm
      */
     private $id;
 
-       
     /**
      * @var string $name
      * 
      * @ORM\Column(name="name", type="string", length=50, unique=true, nullable=false)
      */
     private $name;
-   
-     /**
+
+    /**
      * Get id
      *
      * @return integer 
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
-    
+
     /**
      * Set name
      *
      * @param string $name
      * @return ProductUm
      */
-    public function setName($umName)
-    {
+    public function setName($umName) {
         $this->name = $umName;
-    
+
         return $this;
     }
 
@@ -57,13 +58,38 @@ class ProductUm
      *
      * @return string 
      */
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
-    public function __toString() 
-    {
+    public function __toString() {
         return $this->name;
     }
+
+    public function __construct() {
+        $this->__productsAwareTraitConstruct();
+    }
+
+    public function addProduct(ProductInterface $product): void {
+        if (!$this->hasProduct($product)) {
+            $product->setUm($this);
+            $this->products->add($product);
+        }
+    }
+
+    public function getCode(): ?string {
+        return $this->code;
+    }
+
+    public function removeProduct(ProductInterface $product): void {
+        if ($this->hasProduct($product)) {
+            $product->setUm(null);
+            $this->products->removeElement($product);
+        }
+    }
+
+    public function setCode(?string $code): void {
+        $this->code = $code;
+    }
+
 }
