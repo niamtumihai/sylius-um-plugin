@@ -5,5 +5,5 @@ jms_serializer:
     metadata:
         directories:
             blackowl-sylius-um:
-                namespace_prefix: "Blackowl\\SyliusUmPlugin\\Model"
+                namespace_prefix: "Blackowl\\SyliusUmPlugin\\Entity"
                 path: "@BlackowlSyliusUmPlugin/Resources/config/serializer"

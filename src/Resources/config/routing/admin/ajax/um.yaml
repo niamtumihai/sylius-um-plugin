@@ -1,0 +1,26 @@
+blackowl_sylius_um_admin_ajax_ums_by_phrase:
+    path: /search
+    methods: [GET]
+    defaults:
+        _controller: blackowl_sylius_um.controller.um:indexAction
+        _format: json
+        _sylius:
+            serialization_groups: [Autocomplete]
+            permission: true
+            repository:
+                method: findByPhrase
+                arguments:
+                    phrase: $phrase
+
+blackowl_sylius_um_admin_ajax_um_by_code:
+    path: /
+    methods: [GET]
+    defaults:
+        _controller: blackowl_sylius_um.controller.um:indexAction
+        _format: json
+        _sylius:
+            serialization_groups: [Autocomplete]
+            permission: true
+            repository:
+                method: findBy
+                arguments: [code: $code]

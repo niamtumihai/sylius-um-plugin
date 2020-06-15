@@ -6,7 +6,7 @@ blackowl_sylius_um:
     ums: Ums
     ums_product_list: List products
     edit_um: Editare furnizor
-    new_um: Creare furnizor nou
+    new_um: Creare um
   form:
     um:
       name: Nume

@@ -6,8 +6,8 @@ namespace Blackowl\SyliusUmPlugin\Menu;
 
 use Knp\Menu\FactoryInterface;
 use Knp\Menu\ItemInterface;
-use BlackOwl\SyliusUmPlugin\Event\ProductUmMenuBuilderEvent;
-use BlackOwl\SyliusUmPlugin\Model\ProductUmInterface;
+use Blackowl\SyliusUmPlugin\Event\ProductUmMenuBuilderEvent;
+use Blackowl\SyliusUmPlugin\Model\ProductUmInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\EventDispatcher\LegacyEventDispatcherProxy;
 use Symfony\Contracts\EventDispatcher\EventDispatcherInterface as ContractsEventDispatcherInterface;

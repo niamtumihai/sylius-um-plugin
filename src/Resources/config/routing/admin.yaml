@@ -1,3 +1,7 @@
+blackowl_sylius_um_admin_ajax:
+    resource: "@BlackowlSyliusUmPlugin/Resources/config/routing/admin/ajax.yaml"
+    prefix: /ajax
+
 blackowl_sylius_um_admin:
     resource: |
         alias: blackowl_sylius_um.um

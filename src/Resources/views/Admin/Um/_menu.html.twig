@@ -7,17 +7,26 @@
 {% endif %}
 
 {% block list %}
-{% set form = (options.form) %}
-<div class="ui stackable grid sylius-tabular-form">
-    <div class="thirteen wide column">
-        {{ form_errors(form) }}
-        <div class="ui segment">
-            {% for item in item.children %}
-                {% include item.attribute('template') with {'form': form, 'um': options.um} %}
-            {% endfor %}
+    {% set form = (options.form) %}
+    <div class="ui stackable grid sylius-tabular-form">
+        <div class="thirteen wide column">
+            <div>
+                <h3 class="ui dividing header">{{ 'sylius.ui.details'|trans }}</h3>
+                {{ form_errors(form) }}
+
+                <div class="ui one column stackable grid">
+                    <div class="column">
+                        <div class="ui segment">
+                            {{ form_row(form.code) }}
+                            {{ form_row(form.name) }}
+                        </div>
+                    </div>
+                </div>
+
+                {{ sonata_block_render_event('blackowl_sylius_um.admin.um.' ~ action ~ '.tab_details', {'form': form}) }}
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block item %}

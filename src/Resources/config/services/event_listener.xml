@@ -6,9 +6,9 @@
 
     <services>
 
-        <service id="blackowl_sylius_um.listener.um"
-                 class="Blackowl\SyliusUmPlugin\EventListener\ProductUmDeletionListener">
-            <tag name="kernel.event_listener" event="blackowl_sylius_um.um.pre_delete" method="onProductUmPreDelete" />
+        <service id="blackowl_sylius_supplier.listener.supplier"
+                 class="BlackOwl\SyliusSupplierPlugin\EventListener\SupplierDeletionListener">
+            <tag name="kernel.event_listener" event="blackowl_sylius_supplier.supplier.pre_delete" method="onSupplierPreDelete" />
         </service>
 
     </services>

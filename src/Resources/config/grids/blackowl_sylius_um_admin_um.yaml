@@ -32,8 +32,5 @@ sylius_grid:
                 item:
                     update:
                         type: update
-                    ums_product_list:
-                        type: ums_product_list
-                        label: blackowl_sylius_um.ui.ums_product_list
                     delete:
                         type: delete

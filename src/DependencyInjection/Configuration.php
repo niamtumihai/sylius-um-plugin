@@ -6,7 +6,7 @@ namespace Blackowl\SyliusUmPlugin\DependencyInjection;
 
 use Blackowl\SyliusUmPlugin\Entity\ProductUmInterface;
 use Blackowl\SyliusUmPlugin\Entity\ProductUm;
-use BlackOwl\SyliusUmPlugin\Form\Type\ProductUmType;
+use Blackowl\SyliusUmPlugin\Form\Type\ProductUmType;
 use Blackowl\SyliusUmPlugin\Doctrine\ORM\ProductUmRepository;
 use Sylius\Bundle\ResourceBundle\Controller\ResourceController;
 use Sylius\Bundle\ResourceBundle\SyliusResourceBundle;
