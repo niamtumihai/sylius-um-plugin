@@ -26,7 +26,7 @@ trait ProductTrait
     }
 
     /**
-     * @param ProductUmInterface|null $supplier
+     * @param ProductUmInterface|null $um
      */
     public function setUm(?ProductUmInterface $um): void
     {

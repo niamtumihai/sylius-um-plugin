@@ -1,9 +1,3 @@
-loevgaard_sylius_supplier_shop:
-    resource: "@BlackOwlSyliusSupplierPlugin/Resources/config/routing/shop.yaml"
-    prefix: /{_locale}
-    requirements:
-        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
-
-loevgaard_sylius_supplier_admin:
+blackowl_sylius_um_admin:
     resource: "@BlackowlSyliusUmPlugin/Resources/config/routing/admin.yaml"
     prefix: /admin

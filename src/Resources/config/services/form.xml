@@ -11,24 +11,20 @@
     </parameters>
 
     <services>
-
         <service id="blackowl_sylius_um.form.extension.type.product"
                  class="Blackowl\SyliusUmPlugin\Form\Extension\ProductUmTypeExtension">
             <argument>%blackowl_sylius_um.model.um.class%</argument>
-
             <tag name="form.type_extension" extended_type="Sylius\Bundle\ProductBundle\Form\Type\ProductType"/>
         </service>
 
         <service id="blackowl_sylius_um.form.type.um_choice"
                  class="Blackowl\SyliusUmPlugin\Form\Type\ProductUmChoiceType">
             <argument type="service" id="blackowl_sylius_um.repository.um"/>
-
             <tag name="form.type" alias="blackowl_sylius_um_choice"/>
         </service>
 
         <service id="blackowl_sylius_um.form.type.um_autocomplete_choice"
                  class="Blackowl\SyliusUmPlugin\Form\Type\ProductUmAutocompleteChoiceType">
-
             <tag name="form.type" alias="blackowl_sylius_um_autocomplete_choice"/>
         </service>
 
@@ -36,7 +32,6 @@
                  class="Blackowl\SyliusUmPlugin\Form\Type\ProductUmType">
             <argument>%blackowl_sylius_um.model.um.class%</argument>
             <argument>%blackowl_sylius_um.form.type.um.validation_groups%</argument>
-
             <tag name="form.type"/>
         </service>
     </services>

@@ -13,5 +13,5 @@ interface ProductsAssignerInterface
      * @param ProductUmInterface $um
      * @param ProductInterface[]|array $products
      */
-    public function assign(ProductUmInterface $supplier, array $products): void;
+    public function assign(ProductUmInterface $um, array $products): void;
 }

@@ -9,7 +9,7 @@ use Sylius\Component\Resource\Model\ResourceInterface;
 
 interface ProductUmInterface extends ResourceInterface, CodeAwareInterface, ProductsAwareInterface{
     /**
-     * Returns the name of the supplier
+     * Returns the name of the um
      *
      * @return string
      */

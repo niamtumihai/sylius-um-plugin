@@ -1,13 +1,13 @@
 ---
-blackowl_sylius_supplier:
-  supplier:
+blackowl_sylius_um:
+  um:
     code:
-      max_length: Supplier code must not be longer than {{ limit }} characters|Supplier code must not be longer than {{ limit }} characters.
-      not_blank: Please enter supplier code.
-      regex: Supplier code can only be comprised of letters, numbers, dashes and underscores.
-      unique: Supplier code must be unique.
+      max_length: Um code must not be longer than {{ limit }} characters|Um code must not be longer than {{ limit }} characters.
+      not_blank: Please enter um code.
+      regex: Um code can only be comprised of letters, numbers, dashes and underscores.
+      unique: Um code must be unique.
     name:
-      max_length: Supplier name must not be longer than {{ limit }} characters|Supplier name must not be longer than {{ limit }} characters.
-      min_length: Supplier name must be at least {{ limit }} characters long|Supplier name must be at least {{ limit }} characters long.
-      not_blank: Please enter supplier name.
+      max_length: Um name must not be longer than {{ limit }} characters|Um name must not be longer than {{ limit }} characters.
+      min_length: Um name must be at least {{ limit }} characters long|Um name must be at least {{ limit }} characters long.
+      not_blank: Please enter um name.
   

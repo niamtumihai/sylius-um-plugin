@@ -9,7 +9,7 @@ blackowl_sylius_um_admin:
             all:
                 subheader: blackowl_sylius_um.ui.um
                 templates:
-                    form: "@BlackowlSyliusUmPlugin/Admin/Supplier/_form.html.twig"
+                    form: "@BlackowlSyliusUmPlugin/Admin/Um/_form.html.twig"
             index:
                 icon: 'file image outline'
     type: sylius.resource

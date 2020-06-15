@@ -20,7 +20,7 @@ trait ProductRepositoryTrait
     /**
      * {@inheritdoc}
      */
-    public function createPaginatorForSupplier(ProductUmInterface $um): iterable
+    public function createPaginatorForUm(ProductUmInterface $um): iterable
     {
         return $this->createQueryBuilder('o')
             ->where('o.um = :um')

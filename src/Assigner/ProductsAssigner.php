@@ -17,7 +17,7 @@ final class ProductsAssigner implements ProductsAssignerInterface
         foreach ($products as $product) {
             if (!$product instanceof ProductInterface) {
                 throw new \RuntimeException(sprintf(
-                    "Some product was not found to assign to supplier '%s'",
+                    "Some product was not found to assign to um '%s'",
                     $um->getCode()
                 ));
             }

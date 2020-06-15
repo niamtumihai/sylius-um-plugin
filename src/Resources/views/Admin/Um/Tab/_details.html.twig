@@ -7,13 +7,9 @@
             <div class="ui segment">
                 {{ form_row(form.code) }}
                 {{ form_row(form.name) }}
-                {{ form_row(form.vat) }}
-                {{ form_row(form.address) }}
-                {{ form_row(form.email) }}
-                {{ form_row(form.tel) }}
             </div>
         </div>
     </div>
 
-    {{ sonata_block_render_event('blackowl_sylius_supplier.admin.supplier.' ~ action ~ '.tab_details', {'form': form}) }}
+    {{ sonata_block_render_event('blackowl_sylius_um.admin.um.' ~ action ~ '.tab_details', {'form': form}) }}
 </div>

@@ -1,10 +1,10 @@
-<div class="ui tab" data-tab="supplier">
+<div class="ui tab" data-tab="um">
     <div class="ui segment">
-        <h4 class="ui dividing header">{{ 'blackowl_sylius_supplier.ui.supplier'|trans }}</h4>
-        {{ form_row(form.supplier, {
+        <h4 class="ui dividing header">{{ 'blackowl_sylius_um.ui.um'|trans }}</h4>
+        {{ form_row(form.um, {
             'label': false,
-            'remote_url': path('blackowl_sylius_supplier_admin_ajax_suppliers_by_phrase'),
-            'load_edit_url': path('blackowl_sylius_supplier_admin_ajax_supplier_by_code')})
+            'remote_url': path('blackowl_sylius_um_admin_ajax_ums_by_phrase'),
+            'load_edit_url': path('blackowl_sylius_um_admin_ajax_um_by_code')})
         }}
     </div>
 </div>

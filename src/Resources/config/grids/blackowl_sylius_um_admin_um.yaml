@@ -13,11 +13,11 @@ sylius_grid:
             fields:
                 code:
                     type: string
-                    label: blackowl_sylius_supplier.ui.code
+                    label: blackowl_sylius_um.ui.code
                     sortable: ~
                 name:
                     type: string
-                    label: blackowl_sylius_supplier.ui.name
+                    label: blackowl_sylius_um.ui.name
                     sortable: ~
                 
             filters:
@@ -32,8 +32,8 @@ sylius_grid:
                 item:
                     update:
                         type: update
-                    suppliers_product_list:
-                        type: suppliers_product_list
-                        label: blackowl_sylius_supplier.ui.suppliers_product_list
+                    ums_product_list:
+                        type: ums_product_list
+                        label: blackowl_sylius_um.ui.ums_product_list
                     delete:
                         type: delete

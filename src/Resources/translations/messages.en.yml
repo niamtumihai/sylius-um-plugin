@@ -1,18 +1,16 @@
-blackowl_sylius_supplier:
+blackowl_sylius_um:
     ui:
         name: Name
         code: Code
-        supplier: Supplier
-        suppliers: Suppliers
-        suppliers_product_list: List products
-        edit_supplier: Edit supplier
-        new_supplier: New supplier
+        um: Um
+        ums: Ums
+        ums_product_list: List products
+        edit_um: Edit um
+        new_um: New um
 
     form:
-        supplier:
+        um:
             name: Name
-            code: Code
-            address: Address
         product:
-            supplier: Supplier
-            select_supplier: Select supplier...
+            um: Um
+            select_um: Select um...

@@ -31,6 +31,13 @@ class ProductUm implements ProductUmInterface {
      * @ORM\Column(name="name", type="string", length=50, unique=true, nullable=false)
      */
     private $name;
+   
+    /**
+     * @var string $code
+     * 
+     * @ORM\Column(name="code", type="string", length=50, unique=true, nullable=false)
+     */
+    private $code;
 
     /**
      * Get id

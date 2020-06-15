@@ -1,3 +1,0 @@
-blackowl_sylius_supplier_admin_ajax_supplier:
-    resource: "@BlackOwlSyliusSupplierPlugin/Resources/config/routing/admin/ajax/supplier.yaml"
-    prefix: /supplier/

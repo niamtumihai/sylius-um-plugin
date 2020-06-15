@@ -1,6 +1,6 @@
-BlackOwl\SyliusSupplierPlugin\Model\Supplier:
+Blackowl\SyliusUmPlugin\Entity\ProductUm:
     exclusion_policy: ALL
-    xml_root_name: supplier
+    xml_root_name: um
     properties:
         id:
             expose: true
@@ -15,33 +15,16 @@ BlackOwl\SyliusSupplierPlugin\Model\Supplier:
             expose: true
             type: string
             groups: [Default, Detailed, Autocomplete]
-        address:
-            expose: true
-            type: string
-            groups: [Default, Detailed, Autocomplete]
-        email:
-            expose: true
-            type: string
-            groups: [Default, Detailed, Autocomplete]
-        tel:
-            expose: true
-            type: string
-            groups: [Default, Detailed, Autocomplete]
-        vat:
-            expose: true
-            type: string
-            groups: [Default, Detailed, Autocomplete]
-       
     relations:
         -   rel: self
             href:
-                route: blackowl_sylius_supplier_admin_api_supplier_show
+                route: blackowl_sylius_um_admin_api_um_show
                 parameters:
                     code: expr(object.getCode())
                     version: 1
         -   rel: products
             href:
-                route: blackowl_sylius_supplier_admin_api_supplier_product_index
+                route: blackowl_sylius_um_admin_api_um_product_index
                 parameters:
                     code: expr(object.getCode())
                     version: 1

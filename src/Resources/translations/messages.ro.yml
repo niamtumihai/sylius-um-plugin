@@ -1,26 +1,16 @@
----
-blackowl_sylius_supplier:
+blackowl_sylius_um:
   ui:
     name: Nume
     code: Cod
-    address: Adresa
-    email: Email
-    tel: Telefon
-    vat: CUI
-    supplier: Furnizor
-    suppliers: Furnizori
-    suppliers_product_list: List products
-    edit_supplier: Editare furnizor
-    new_supplier: Creare furnizor nou
+    um: Um
+    ums: Ums
+    ums_product_list: List products
+    edit_um: Editare furnizor
+    new_um: Creare furnizor nou
   form:
-    supplier:
+    um:
       name: Nume
       code: Code
-      images: Images
-      address: Adresa
-      email: Email
-      tel: Telefon
-      vat: CUI
     product:
-      supplier: Supplier
-      select_supplier: Select supplier...
+      um: Um
+      select_um: Select um...

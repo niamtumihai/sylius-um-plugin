@@ -13,7 +13,7 @@
         {{ form_errors(form) }}
         <div class="ui segment">
             {% for item in item.children %}
-                {% include item.attribute('template') with {'form': form, 'supplier': options.supplier} %}
+                {% include item.attribute('template') with {'form': form, 'um': options.um} %}
             {% endfor %}
         </div>
     </div>

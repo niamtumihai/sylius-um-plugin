@@ -27,7 +27,7 @@ final class ProductUmDeletionListener
         }
 
         if ($um->hasProducts()) {
-            $event->stop('blackowl_sylius_productUm.um.delete_error');
+            $event->stop('blackowl_sylius_um.um.delete_error');
         }
     }
 }
