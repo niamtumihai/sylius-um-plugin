@@ -15,10 +15,10 @@ final class AdminProductFormMenuListener
     {
         $menu = $event->getMenu();
 
-        $menu
-            ->addChild('um')
-            ->setAttribute('template', '@BlackowlSyliusUmPlugin/Admin/Product/_um.html.twig')
-            ->setLabel('blackowl_sylius_um.ui.um')
-        ;
+//        $menu
+//            ->addChild('um')
+//            ->setAttribute('template', '@BlackowlSyliusUmPlugin/Admin/Product/_um.html.twig')
+//            ->setLabel('blackowl_sylius_um.ui.um')
+//        ;
     }
 }
