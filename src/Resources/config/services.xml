@@ -6,7 +6,6 @@
 
     <imports>
         <import resource="services/etc.xml" />
-        <import resource="services/event_listener.xml" />
         <import resource="services/form.xml" />
         <import resource="services/menu.xml" />
     </imports>

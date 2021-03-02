@@ -1,5 +1,5 @@
 blackowl_sylius_um_admin_ajax_ums_by_phrase:
-    path: /search
+    path: /search_um
     methods: [GET]
     defaults:
         _controller: blackowl_sylius_um.controller.um:indexAction
