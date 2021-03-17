@@ -26,10 +26,10 @@ class ProductUmTypeExtension extends AbstractTypeExtension
     /**
      * {@inheritdoc}
      */
-    public static function getExtendedTypes()
+    public static function getExtendedTypes():iterable
     {
         return [
-            ProductType::class,
+            ProductType::class
         ];
     }
 }
