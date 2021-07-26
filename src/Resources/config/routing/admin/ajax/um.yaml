@@ -22,5 +22,6 @@ blackowl_sylius_um_admin_ajax_um_by_code:
             serialization_groups: [Autocomplete]
             permission: true
             repository:
-                method: findBy
-                arguments: [code: $code]
+                method: findByC
+                arguments:
+                    code: $code

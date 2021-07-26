@@ -21,4 +21,14 @@ class ProductUmRepository extends EntityRepository implements ProductUmRepositor
             ->getResult()
             ;
     }
+    public function findByC($code): array
+    {
+        return $this->createQueryBuilder('o')
+            ->select('o.id as id, o.code as code, o.name as name')
+            ->andWhere('o.code = :phrase')
+            ->setParameter('phrase', $code[0] )
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }
