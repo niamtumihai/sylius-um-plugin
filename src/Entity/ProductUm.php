@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="blackowl_products_um")
  * @ORM\Entity
+ * @ORM\MappedSuperclass
  */
 class ProductUm implements ProductUmInterface {
 
@@ -95,6 +96,27 @@ class ProductUm implements ProductUmInterface {
 
     public function setCode(?string $code): void {
         $this->code = $code;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="Sylius\Component\Product\Model\ProductInterface", mappedBy="pjUm")
+     */
+    private $products2;
+
+    /**
+     * @return mixed
+     */
+    public function getProducts2():array
+    {
+        return $this->products2;
+    }
+
+    /**
+     * @param mixed $products2
+     */
+    public function setProducts2($products2): void
+    {
+        $this->products2 = $products2;
     }
     
 }

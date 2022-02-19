@@ -34,11 +34,12 @@ final class Configuration implements ConfigurationInterface
         $rootNode
             ->addDefaultsIfNotSet()
             ->children()
-                ->scalarNode('driver')->defaultValue(SyliusResourceBundle::DRIVER_DOCTRINE_ORM)->end()
+            ->scalarNode('driver')
+            ->defaultValue(SyliusResourceBundle::DRIVER_DOCTRINE_ORM)
             ->end()
-        ;
+            ->end();
 
-       $this->addResourcesSection($rootNode);
+        $this->addResourcesSection($rootNode);
 
         return $treeBuilder;
     }
@@ -50,29 +51,28 @@ final class Configuration implements ConfigurationInterface
     {
         $node
             ->children()
-                ->arrayNode('resources')
-                    ->addDefaultsIfNotSet()
-                    ->children()
-                        ->arrayNode('um')
-                            ->addDefaultsIfNotSet()
-                            ->children()
-                                ->variableNode('options')->end()
-                                ->arrayNode('classes')
-                                    ->addDefaultsIfNotSet()
-                                    ->children()
-                                        ->scalarNode('model')->defaultValue(ProductUm::class)->cannotBeEmpty()->end()
-                                        ->scalarNode('interface')->defaultValue(ProductUmInterface::class)->cannotBeEmpty()->end()
-                                        ->scalarNode('controller')->defaultValue(ResourceController::class)->cannotBeEmpty()->end()
-                                        ->scalarNode('repository')->defaultValue(ProductUmRepository::class)->cannotBeEmpty()->end()
-                                        ->scalarNode('factory')->defaultValue(Factory::class)->end()
-                                        ->scalarNode('form')->defaultValue(ProductUmType::class)->cannotBeEmpty()->end()
-                                    ->end()
-                                ->end()
-                            ->end()
-                        ->end()
-                    ->end()
-                ->end()
+            ->arrayNode('resources')
+            ->addDefaultsIfNotSet()
+            ->children()
+            ->arrayNode('um')
+            ->addDefaultsIfNotSet()
+            ->children()
+            ->variableNode('options')->end()
+            ->arrayNode('classes')
+            ->addDefaultsIfNotSet()
+            ->children()
+            ->scalarNode('model')->defaultValue(ProductUm::class)->cannotBeEmpty()->end()
+            ->scalarNode('interface')->defaultValue(ProductUmInterface::class)->cannotBeEmpty()->end()
+            ->scalarNode('controller')->defaultValue(ResourceController::class)->cannotBeEmpty()->end()
+            ->scalarNode('repository')->defaultValue(ProductUmRepository::class)->cannotBeEmpty()->end()
+            ->scalarNode('factory')->defaultValue(Factory::class)->end()
+            ->scalarNode('form')->defaultValue(ProductUmType::class)->cannotBeEmpty()->end()
             ->end()
-        ;
+            ->end()
+            ->end()
+            ->end()
+            ->end()
+            ->end()
+            ->end();
     }
 }
