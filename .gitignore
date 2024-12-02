@@ -5,9 +5,11 @@
 /etc/build/*
 !/etc/build/.gitignore
 
-/tests/Application/yarn.lock
-
 /behat.yml
 /phpspec.yml
 
 /nbproject
+
+.github/
+
+tests/*
