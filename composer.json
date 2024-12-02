@@ -5,7 +5,7 @@
     "description": "UM plugin for Sylius.",
     "license": "MIT",
     "require": {
-        "php": "^7.4 | ^8",
+        "php": "^7.4",
         "sylius/sylius": "^1.7.5"
     },
     "require-dev": {
