@@ -50,7 +50,8 @@
     },
     "config": {
         "allow-plugins": {
-            "symfony/thanks": true
+            "symfony/thanks": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     }
 }
