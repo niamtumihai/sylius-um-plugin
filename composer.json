@@ -37,7 +37,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Blackowl\\SyliusUmPlugin\\": "src/",
+            "Blackowl\\SyliusUmPlugin\\": "src/"
         }
     },
     "autoload-dev": {
